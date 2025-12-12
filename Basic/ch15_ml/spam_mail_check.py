@@ -77,8 +77,9 @@ x = vectorizer.fit_transform(x)
 #   (0, 107)	1  <-- 0번째 문서에서 107에 해당 하는 단어가 1번 나왔습니다.
 #   (0, 43)	1 <-- 0번째 문서에서 43에 해당 하는 단어가 1번 나왔습니다.
 
-# print(f'문서(이메일 제목)의 갯수는 {x.shape(0)}이고, 출현한 단어의 갯수는 {x.shape(1)}개 입니다.')
+print(f'문서(이메일 제목)의 갯수는 {x.shape[0]}이고, 출현한 단어의 갯수는 {x.shape[1]}개입니다.\n')
 vocab = vectorizer.vocabulary_
+
 # dict comprehension : 역매핑(숫자 -> 단어)
 inv_vocab = {v : k for k, v in vocab.items()}
 
